@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        #counter {
+            font-size: 2em;
+        }
+    </style>
+
+    <script>
+        // ustaw datę końca
+        var countDownDate = new Date("Jul 13, 2023 12:00:00").getTime();
+
+        // aktualizuj licznik co 1 sekundę
+        var countdownfunction = setInterval(function() {
+
+            // pobierz aktualny czas
+            var now = new Date().getTime();
+
+            // znajdź różnicę między teraz a datą końca
+            var distance = countDownDate - now;
+
+            // oblicz dni, godziny, minuty i sekundy
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+
+            // wyświetl wynik
+            document.getElementById("counter").innerHTML = days + "d " + hours + "h ";
+
+            // jeżeli licznik dobiegł końca, wyświetl komunikat
+            if (distance < 0) {
+                clearInterval(countdownfunction);
+                document.getElementById("counter").innerHTML = "Zmiana nicku na plyta__ już dokonana!";
+            }
+        }, 1000);
+    </script>
+</head>
+<body>
+    <p>Zmiana nicku na plyta__ za: <span id="counter"></span></p>
+</body>
+</html>
