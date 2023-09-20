@@ -20,19 +20,8 @@
             font-size: 1em;
         }
     </style>
-
-    <script>
-        var countDownDate = new Date("Sep 11, 2023 19:12:00").getTime();
-            var now = new Date("Sep 20, 2023 15:21:00").getTime();
-            var distance = now - countDownDate;
-            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-            document.getElementById("counter").innerHTML = days + "dni " + hours + "godzin " + minutes + "minut " + seconds + "sekund";
-    </script>
 </head>
 <body>
-    <p>Wolność od: <span id="counter"></span> 🫡</p>
+    <p>Wolność po: 8dniach 20godzinach 9minutach <span id="counter"></span> 🫡</p>
 </body>
 </html>
